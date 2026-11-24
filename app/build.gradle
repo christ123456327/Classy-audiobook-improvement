@@ -62,6 +62,10 @@ android {
     buildFeatures {
         buildConfig true
     }
+    // Release lint-vital is skipped for the local ROM build (it needs extra downloads and is not a test gate)
+    lint {
+        checkReleaseBuilds false
+    }
     signingConfigs {
         release {
             v1SigningEnabled true
